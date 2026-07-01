@@ -60,7 +60,8 @@ export default function AdminLoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter admin email..."
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-navy-950 font-bold text-sm border-2 border-slate-300 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/20 focus:outline-none shadow-sm transition-all"
+                style={{ color: '#000000', backgroundColor: '#ffffff', WebkitTextFillColor: '#000000' }}
+                className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-black !text-black font-black text-sm border-2 border-slate-300 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/20 focus:outline-none shadow-sm transition-all placeholder:text-slate-400 placeholder:font-normal"
               />
             </div>
           </div>
@@ -75,7 +76,8 @@ export default function AdminLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password..."
-                className="w-full pl-10 pr-12 py-3 rounded-xl bg-white text-navy-950 font-bold text-sm border-2 border-slate-300 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/20 focus:outline-none shadow-sm transition-all"
+                style={{ color: '#000000', backgroundColor: '#ffffff', WebkitTextFillColor: '#000000' }}
+                className="w-full pl-10 pr-12 py-3 rounded-xl bg-white text-black !text-black font-black text-sm border-2 border-slate-300 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/20 focus:outline-none shadow-sm transition-all placeholder:text-slate-400 placeholder:font-normal"
               />
               <button
                 type="button"
