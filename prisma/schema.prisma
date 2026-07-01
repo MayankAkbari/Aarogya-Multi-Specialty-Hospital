@@ -1,0 +1,103 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  SUPER_ADMIN
+  RECEPTIONIST
+  CONTENT_EDITOR
+  DOCTOR
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  RESCHEDULED
+  COMPLETED
+  CANCELLED
+}
+
+model User {
+  id            String    @id @default(uuid())
+  name          String
+  email         String    @unique
+  passwordHash  String
+  role          Role      @default(RECEPTIONIST)
+  phone         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Department {
+  id            String    @id @default(uuid())
+  name          String    @unique
+  slug          String    @unique
+  icon          String
+  description   String
+  headDoctor    String?
+  doctors       Doctor[]
+  createdAt     DateTime  @default(now())
+}
+
+model Doctor {
+  id            String       @id @default(uuid())
+  name          String
+  slug          String       @unique
+  qualification String
+  experienceYr  Int
+  designation   String
+  photoUrl      String
+  bio           String
+  consultFee    Float
+  rating        Float        @default(4.9)
+  reviewCount   Int          @default(0)
+  isAvailable   Boolean      @default(true)
+  departmentId  String
+  department    Department   @relation(fields: [departmentId], references: [id])
+  appointments  Appointment[]
+  createdAt     DateTime     @default(now())
+}
+
+model Appointment {
+  id              String            @id @default(uuid())
+  patientName     String
+  patientPhone    String
+  patientEmail    String?
+  age             Int
+  gender          String
+  symptoms        String?
+  appointmentDate DateTime
+  slotTime        String
+  status          AppointmentStatus @default(PENDING)
+  doctorId        String
+  doctor          Doctor            @relation(fields: [doctorId], references: [id])
+  createdAt       DateTime          @default(now())
+}
+
+model PatientInquiry {
+  id            String   @id @default(uuid())
+  name          String
+  phone         String
+  email         String?
+  department    String?
+  message       String
+  isInEmergency Boolean  @default(false)
+  isResolved    Boolean  @default(false)
+  createdAt     DateTime @default(now())
+}
+
+model Review {
+  id            String   @id @default(uuid())
+  patientName   String
+  rating        Int      @default(5)
+  comment       String
+  videoUrl      String?
+  treatment     String
+  isApproved    Boolean  @default(false)
+  createdAt     DateTime @default(now())
+}
