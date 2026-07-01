@@ -52,18 +52,18 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-white/10">
+            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-white/20">
               <div className="flex flex-col items-center lg:items-start">
-                <span className="font-extrabold text-2xl sm:text-3xl text-white">50,000+</span>
-                <span className="text-xs text-emerald-400 font-semibold uppercase">Happy Patients</span>
+                <span className="font-black text-2xl sm:text-3xl text-emerald-400">50,000+</span>
+                <span className="text-xs sm:text-sm font-bold text-white tracking-wider uppercase mt-0.5">Happy Patients</span>
               </div>
-              <div className="flex flex-col items-center lg:items-start border-l border-white/10 pl-4">
-                <span className="font-extrabold text-2xl sm:text-3xl text-white">150+</span>
-                <span className="text-xs text-teal-400 font-semibold uppercase">Senior Specialists</span>
+              <div className="flex flex-col items-center lg:items-start border-l border-white/20 pl-4">
+                <span className="font-black text-2xl sm:text-3xl text-teal-300">150+</span>
+                <span className="text-xs sm:text-sm font-bold text-white tracking-wider uppercase mt-0.5">Senior Specialists</span>
               </div>
-              <div className="flex flex-col items-center lg:items-start border-l border-white/10 pl-4">
-                <span className="font-extrabold text-2xl sm:text-3xl text-white">99.4%</span>
-                <span className="text-xs text-sky-400 font-semibold uppercase">Surgical Success</span>
+              <div className="flex flex-col items-center lg:items-start border-l border-white/20 pl-4">
+                <span className="font-black text-2xl sm:text-3xl text-sky-300">99.4%</span>
+                <span className="text-xs sm:text-sm font-bold text-white tracking-wider uppercase mt-0.5">Surgical Success</span>
               </div>
             </div>
           </div>
