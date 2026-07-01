@@ -32,16 +32,16 @@ export default function FacilitiesShowcase() {
   ];
 
   return (
-    <section className="py-24 bg-navy-950 text-white relative overflow-hidden">
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-black text-emerald-400 uppercase tracking-widest">Medical Infrastructure</span>
-          <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
+          <span className="text-xs font-black text-emerald-600 uppercase tracking-widest">Medical Infrastructure</span>
+          <h2 className="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">
             World-Class Quaternary Medical Technology Suite
           </h2>
-          <p className="text-slate-200 font-medium text-sm sm:text-base">
+          <p className="text-slate-900 font-bold text-sm sm:text-base">
             Equipped with world-class diagnostics, automated laboratories, and ultra-sterile modular surgical infrastructure.
           </p>
         </div>
