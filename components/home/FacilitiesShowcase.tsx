@@ -38,7 +38,7 @@ export default function FacilitiesShowcase() {
         
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-xs font-black text-emerald-400 uppercase tracking-widest">Medical Infrastructure</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
             World-Class Quaternary Medical Technology Suite
           </h2>
           <p className="text-slate-200 font-medium text-sm sm:text-base">
