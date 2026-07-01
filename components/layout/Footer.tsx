@@ -60,6 +60,14 @@ export default function Footer() {
             <li><Link href="/health-packages" className="hover:text-emerald-400 transition-colors">Preventive Health Checkups</Link></li>
             <li><Link href="/insurance-tpa" className="hover:text-emerald-400 transition-colors">Cashless Insurance & TPA Partners</Link></li>
             <li><Link href="/patient-services" className="hover:text-emerald-400 transition-colors">Room Tariffs & Online Reports</Link></li>
+            <li className="pt-2">
+              <Link 
+                href="/admin/login" 
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-xs shadow-md transition-all hover:scale-105 active:scale-95"
+              >
+                <ShieldCheck className="w-4 h-4" /> Sign In to Admin Portal
+              </Link>
+            </li>
           </ul>
         </div>
 
